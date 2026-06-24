@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — SC Conseils</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.mentions-hero {
+  background: var(--bleu);
+  padding: 160px 80px 80px;
+  position: relative;
+  overflow: hidden;
+}
+/* Losanges décoratifs hero mentions */
+.mentions-hero::before {
+  content: '';
+  position: absolute; right: -100px; top: -100px;
+  width: 380px; height: 380px;
+  border: 70px solid rgba(201,168,76,0.06);
+  transform: rotate(45deg);
+}
+.mentions-hero::after {
+  content: '';
+  position: absolute; right: 150px; top: 80px;
+  width: 160px; height: 160px;
+  border: 30px solid rgba(201,168,76,0.09);
+  transform: rotate(45deg);
+}
+.mentions-hero-inner { max-width: 700px; position: relative; z-index: 1; }
+.mentions-hero h1 {
+  font-family: var(--font-titre);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  color: var(--blanc);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.mentions-hero p { color: rgba(255,255,255,0.6); font-size: 14px; letter-spacing: 1px; }
+
+.mentions-body { max-width: 860px; margin: 0 auto; padding: 80px 40px 100px; }
+
+.mentions-bloc { margin-bottom: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(26,107,122,0.08); }
+.mentions-bloc:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.mentions-bloc-titre { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.mentions-bloc-num {
+  font-family: var(--font-titre); font-size: 48px; font-weight: 700;
+  color: var(--or); opacity: 0.25; line-height: 1; flex-shrink: 0; width: 48px;
+}
+.mentions-bloc-label { font-family: var(--font-titre); font-size: 26px; font-weight: 600; color: var(--bleu); line-height: 1.2; }
+
+.mentions-ligne { display: grid; grid-template-columns: 200px 1fr; gap: 12px 24px; margin-bottom: 10px; font-size: 14px; line-height: 1.7; }
+.mentions-ligne-cle { color: var(--texte-clair); font-weight: 500; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; padding-top: 2px; }
+.mentions-ligne-val { color: var(--texte); }
+
+.mentions-texte { font-size: 14px; color: var(--texte-clair); line-height: 1.9; margin-bottom: 14px; }
+.mentions-texte:last-child { margin-bottom: 0; }
+
+.mentions-tag-list { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.mentions-tag-item {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 16px 20px; background: var(--gris); border-left: 3px solid var(--or);
+}
+.mentions-tag-item-titre { font-weight: 600; color: var(--bleu); font-size: 13px; }
+.mentions-tag-item-desc { font-size: 12px; color: var(--texte-clair); margin-top: 2px; }
+
+.mentions-accent { color: var(--bleu); font-weight: 600; }
+
+.mentions-update {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bleu-pale); color: var(--bleu);
+  font-size: 12px; letter-spacing: 1px; padding: 8px 16px; margin-top: 40px; font-weight: 500;
+}
+.mentions-update::before { content: '◆'; font-size: 8px; color: var(--or); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="images/logo(sebastien).png" alt="SC Conseils"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-accueil">Accueil</a></li>
+    <li><a href="solutions.html" id="nav-solutions">Mes solutions</a></li>
+    <li><a href="demarche.html" id="nav-demarche">Ma démarche</a></li>
+  </ul>
+</nav>
+
+<section class="mentions-hero">
+  <div class="mentions-hero-inner">
+    <span class="section-tag">Transparence &amp; Légalité</span>
+    <h1>Mentions<br>légales</h1>
+    <p>Informations légales et réglementaires relatives au site SC Conseils</p>
+  </div>
+</section>
+
+<div class="mentions-body">
+
+  <!-- 1. Éditeur -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">01</div>
+      <div class="mentions-bloc-label">Éditeur du site</div>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Nom</span>
+      <span class="mentions-ligne-val mentions-accent">Sébastien Canquery</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Activité</span>
+      <span class="mentions-ligne-val">Conseiller en Gestion de Patrimoine — Exercice à titre individuel</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">RSAC</span>
+      <span class="mentions-ligne-val">RSAC de Versailles sous le n° 852 876 077</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Email</span>
+      <span class="mentions-ligne-val">sebastien.canquery@gmail.com</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Directeur de publication</span>
+      <span class="mentions-ligne-val">Sébastien Canquery</span>
+    </div>
+  </div>
+
+  <!-- 2. Hébergement -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">02</div>
+      <div class="mentions-bloc-label">Hébergement</div>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Hébergeur</span>
+      <span class="mentions-ligne-val mentions-accent">[À COMPLÉTER]</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Adresse</span>
+      <span class="mentions-ligne-val">[À COMPLÉTER]</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Site web</span>
+      <span class="mentions-ligne-val">[À COMPLÉTER]</span>
+    </div>
+  </div>
+
+  <!-- 3. Habilitations -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">03</div>
+      <div class="mentions-bloc-label">Habilitations réglementaires</div>
+    </div>
+    <p class="mentions-texte">Sébastien Canquery est enregistré à l'ORIAS (Organisme pour le Registre des Intermédiaires en Assurance) sous le numéro <span class="mentions-accent">21004487</span>, consultable sur <a href="https://www.orias.fr" target="_blank" style="color:var(--or);">www.orias.fr</a>.</p>
+    <p class="mentions-texte">Son activité est soumise au contrôle de l'<span class="mentions-accent">Autorité de Contrôle Prudentiel et de Résolution (ACPR)</span> — 4 Place de Budapest, 75 436 Paris Cedex 9.</p>
+    <div class="mentions-tag-list">
+      <div class="mentions-tag-item">
+        <div>
+          <div class="mentions-tag-item-titre">Conseiller en Investissements Financiers (CIF)</div>
+          <div class="mentions-tag-item-desc">Membre de l'ANACOFI agréée par l'AMF — enregistré sous le n° E011090</div>
+        </div>
+      </div>
+      <div class="mentions-tag-item">
+        <div>
+          <div class="mentions-tag-item-titre">MIOBSP</div>
+          <div class="mentions-tag-item-desc">Mandataire d'intermédiaire en opérations de banque et services de paiement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Assurance RC Pro -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">04</div>
+      <div class="mentions-bloc-label">Assurance responsabilité civile professionnelle</div>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Assureur</span>
+      <span class="mentions-ligne-val mentions-accent">Zurich Insurance</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Adresse</span>
+      <span class="mentions-ligne-val">112 av. de Wagram — 75017 Paris</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">N° de contrat</span>
+      <span class="mentions-ligne-val">7400023129</span>
+    </div>
+    <div class="mentions-ligne">
+      <span class="mentions-ligne-cle">Couverture</span>
+      <span class="mentions-ligne-val">France métropolitaine</span>
+    </div>
+  </div>
+
+  <!-- 5. Propriété intellectuelle -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">05</div>
+      <div class="mentions-bloc-label">Propriété intellectuelle</div>
+    </div>
+    <p class="mentions-texte">L'ensemble du contenu de ce site (textes, visuels, structure, mise en page) est la propriété exclusive de Sébastien Canquery. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable est strictement interdite.</p>
+    <p class="mentions-texte">Toute utilisation non autorisée constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+  </div>
+
+  <!-- 6. Données personnelles -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">06</div>
+      <div class="mentions-bloc-label">Données personnelles</div>
+    </div>
+    <p class="mentions-texte">Ce site est un site vitrine. Aucun formulaire de collecte de données personnelles n'est présent. Aucune donnée personnelle n'est collectée, traitée ou stockée via ce site.</p>
+    <p class="mentions-texte">Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande : <a href="mailto:sebastien.canquery@gmail.com" style="color:var(--or);">sebastien.canquery@gmail.com</a>.</p>
+  </div>
+
+  <!-- 7. Cookies -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">07</div>
+      <div class="mentions-bloc-label">Cookies</div>
+    </div>
+    <p class="mentions-texte">Ce site ne dépose aucun cookie de traçage ou publicitaire sur votre navigateur. Des cookies techniques strictement nécessaires au bon fonctionnement du site peuvent être utilisés et ne nécessitent pas votre consentement.</p>
+  </div>
+
+  <!-- 8. Limitation de responsabilité -->
+  <div class="mentions-bloc">
+    <div class="mentions-bloc-titre">
+      <div class="mentions-bloc-num">08</div>
+      <div class="mentions-bloc-label">Limitation de responsabilité</div>
+    </div>
+    <p class="mentions-texte">Les informations publiées sur ce site sont fournies à titre indicatif et ne constituent pas un conseil en investissement personnalisé. Sébastien Canquery s'efforce de maintenir les informations à jour, mais ne peut être tenu responsable d'éventuelles inexactitudes.</p>
+    <p class="mentions-texte">Ce site peut contenir des liens vers des sites tiers. Sébastien Canquery n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo"><a href="index.html"><img src="images/logo(sebastien).png" alt="SC Conseils"></a></div>
+      <p>Sébastien Canquery<br>Conseil Patrimonial Indépendant</p>
+      <div class="footer-socials">
+        <a href="#" target="_blank" class="footer-social-btn" title="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="#" target="_blank" class="footer-social-btn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <p><a href="index.html">Accueil</a></p>
+      <p><a href="solutions.html">Mes solutions</a></p>
+      <p><a href="demarche.html">Ma démarche</a></p>
+      <p><a href="mentions.html">Mentions légales</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Informations légales</h4>
+      <p>Inscrit à l'ORIAS sous le n° 21004487<br>Sous le contrôle de l'ACPR<br>Assurance RC Pro : Zurich Insurance</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 SC Conseils — Sébastien Canquery. Tous droits réservés.</div>
+</footer>
+
+<script>
+document.getElementById('nav-accueil') && document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Démarche — SC Conseils</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Losanges décoratifs hero démarche */
+.page-hero::before {
+  content: '';
+  position: absolute; right: -80px; top: -80px;
+  width: 320px; height: 320px;
+  border: 60px solid rgba(201,168,76,0.07);
+  transform: rotate(45deg);
+}
+.page-hero::after {
+  content: '';
+  position: absolute; right: 160px; top: 80px;
+  width: 140px; height: 140px;
+  border: 28px solid rgba(201,168,76,0.10);
+  transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="images/logo(sebastien).png" alt="SC Conseils"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-accueil">Accueil</a></li>
+    <li><a href="solutions.html" id="nav-solutions">Mes solutions</a></li>
+    <li><a href="demarche.html" id="nav-demarche">Ma démarche</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="section-tag">Mon accompagnement</span>
+    <h1 class="section-titre">Ma démarche</h1>
+    <p class="page-hero-desc">Un accompagnement structuré et humain — du premier échange jusqu'au suivi dans la durée, à chaque étape de votre vie.</p>
+  </div>
+  <div class="page-hero-illus">
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1A6B7A"/>
+          <stop offset="100%" stop-color="#2A8A9A"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="300" fill="url(#bg4)"/>
+      <!-- Losanges décoratifs en fond SVG -->
+      <rect x="140" y="40" width="120" height="120" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" transform="rotate(45 200 100)"/>
+      <rect x="110" y="10" width="180" height="180" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" transform="rotate(45 200 100)"/>
+      <!-- Ligne pointillée -->
+      <path d="M40,250 Q100,200 160,180 Q220,160 260,120 Q300,80 360,60" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="2" stroke-dasharray="8,6"/>
+      <!-- Losange étape 1 -->
+      <rect x="28" y="238" width="24" height="24" fill="#C9A84C" transform="rotate(45 40 250)"/>
+      <text x="40" y="255" text-anchor="middle" fill="#1A6B7A" font-size="11" font-weight="bold" font-family="sans-serif">1</text>
+      <!-- Losange étape 2 -->
+      <rect x="148" y="168" width="24" height="24" fill="#C9A84C" transform="rotate(45 160 180)"/>
+      <text x="160" y="185" text-anchor="middle" fill="#1A6B7A" font-size="11" font-weight="bold" font-family="sans-serif">2</text>
+      <!-- Losange étape 3 -->
+      <rect x="248" y="108" width="24" height="24" fill="#C9A84C" transform="rotate(45 260 120)"/>
+      <text x="260" y="125" text-anchor="middle" fill="#1A6B7A" font-size="11" font-weight="bold" font-family="sans-serif">3</text>
+      <!-- Losange étape 4 (plus grand) -->
+      <rect x="346" y="46" width="28" height="28" fill="#C9A84C" stroke="white" stroke-width="2" transform="rotate(45 360 60)"/>
+      <text x="360" y="63" text-anchor="middle" fill="#1A6B7A" font-size="11" font-weight="bold" font-family="sans-serif">4</text>
+      <!-- Labels -->
+      <text x="40" y="278" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="9" font-family="sans-serif">ÉCOUTE</text>
+      <text x="160" y="208" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="9" font-family="sans-serif">BILAN</text>
+      <text x="260" y="148" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="9" font-family="sans-serif">CONSEIL</text>
+      <text x="360" y="90" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="9" font-family="sans-serif">SUIVI</text>
+      <text x="200" y="285" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="11" font-family="sans-serif" letter-spacing="2">MA DÉMARCHE D'ACCOMPAGNEMENT</text>
+    </svg>
+  </div>
+</section>
+
+<section class="section-demarche">
+  <div class="demarche-intro">
+    <span class="section-tag">Les étapes</span>
+    <h2 class="section-titre">Un processus en 4 étapes</h2>
+    <div class="section-trait centre"></div>
+    <p>Ma démarche repose sur une méthodologie claire qui place votre réalité au centre de chaque décision patrimoniale.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="etape gauche">
+      <div class="etape-contenu">
+        <p class="etape-tag">Étape 01</p>
+        <h3 class="etape-titre">La rencontre &amp; l'écoute</h3>
+        <p class="etape-texte">Tout commence par un échange libre, sans frais et sans engagement. Je prends le temps de cerner votre situation personnelle, professionnelle et familiale, vos ambitions et vos préoccupations du moment.</p>
+        <div class="etape-detail">
+          <span class="etape-pill">Gratuit</span>
+          <span class="etape-pill">Confidentiel</span>
+          <span class="etape-pill">Sans engagement</span>
+        </div>
+      </div>
+      <div class="etape-num-wrapper"><div class="etape-num"><span>1</span></div></div>
+      <div class="etape-vide"></div>
+    </div>
+
+    <div class="etape droite">
+      <div class="etape-vide"></div>
+      <div class="etape-num-wrapper"><div class="etape-num"><span>2</span></div></div>
+      <div class="etape-contenu">
+        <p class="etape-tag">Étape 02</p>
+        <h3 class="etape-titre">Le bilan patrimonial</h3>
+        <p class="etape-texte">J'établis un état des lieux complet de votre patrimoine : actifs, dettes, revenus, charges et fiscalité. Ce diagnostic approfondi est le socle indispensable à toute stratégie solide et durable.</p>
+        <div class="etape-detail">
+          <span class="etape-pill">Analyse complète</span>
+          <span class="etape-pill">Bilan personnalisé</span>
+          <span class="etape-pill">Diagnostic fiscal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="etape gauche">
+      <div class="etape-contenu">
+        <p class="etape-tag">Étape 03</p>
+        <h3 class="etape-titre">Les préconisations sur mesure</h3>
+        <p class="etape-texte">À partir du bilan, je vous présente une ou plusieurs stratégies patrimoniales cohérentes avec vos objectifs. Chaque solution est expliquée avec clarté, avantages comme points de vigilance inclus.</p>
+        <div class="etape-detail">
+          <span class="etape-pill">Solutions adaptées</span>
+          <span class="etape-pill">Information claire</span>
+          <span class="etape-pill">Transparence totale</span>
+        </div>
+      </div>
+      <div class="etape-num-wrapper"><div class="etape-num"><span>3</span></div></div>
+      <div class="etape-vide"></div>
+    </div>
+
+    <div class="etape droite">
+      <div class="etape-vide"></div>
+      <div class="etape-num-wrapper"><div class="etape-num"><span>4</span></div></div>
+      <div class="etape-contenu">
+        <p class="etape-tag">Étape 04</p>
+        <h3 class="etape-titre">Le suivi dans la durée</h3>
+        <p class="etape-texte">La mise en place n'est pas une fin en soi. Je reste à vos côtés pour ajuster votre stratégie au fil du temps, en phase avec les évolutions de votre vie et du cadre réglementaire.</p>
+        <div class="etape-detail">
+          <span class="etape-pill">Suivi régulier</span>
+          <span class="etape-pill">Relation durable</span>
+          <span class="etape-pill">Adaptation continue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-engagement">
+  <span class="section-tag">Ma promesse</span>
+  <h2 class="section-titre">Mes engagements</h2>
+  <div class="section-trait centre" style="background:var(--or);margin:16px auto 0;"></div>
+  <div class="engagements-grid">
+    <div class="engagement-item">
+      <div class="engagement-icone">🎯</div>
+      <h3 class="engagement-titre">Conseil indépendant</h3>
+      <p class="engagement-texte">Mes recommandations sont dictées uniquement par votre intérêt — aucun conflit, aucune pression commerciale.</p>
+    </div>
+    <div class="engagement-item">
+      <div class="engagement-icone">🔒</div>
+      <h3 class="engagement-titre">Confidentialité absolue</h3>
+      <p class="engagement-texte">Vos données patrimoniales et personnelles sont strictement protégées et ne sont jamais partagées sans votre accord explicite.</p>
+    </div>
+    <div class="engagement-item">
+      <div class="engagement-icone">⚖️</div>
+      <h3 class="engagement-titre">Information équilibrée</h3>
+      <p class="engagement-texte">Je vous expose toujours les avantages ET les risques de chaque solution. La clarté est une condition de la confiance.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-cta">
+  <div class="cta-texte">
+    <h3>Prêt à construire<br>votre avenir patrimonial ?</h3>
+    <p>Contactez-moi par email.<br>Premier échange toujours gratuit et confidentiel.</p>
+  </div>
+  <div class="cta-contacts">
+    <div><img src="images/numero(sebastien).png" alt="Coordonnées de contact" style="width:320px;display:block;border-radius:12px;clip-path:inset(0 0 0 4px round 12px);"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo"><a href="index.html"><img src="images/logo(sebastien).png" alt="SC Conseils"></a></div>
+      <p>Sébastien Canquery<br>Conseil Patrimonial Indépendant</p>
+      <div class="footer-socials">
+        <a href="#" target="_blank" class="footer-social-btn" title="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="#" target="_blank" class="footer-social-btn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <p><a href="index.html">Accueil</a></p>
+      <p><a href="solutions.html">Mes solutions</a></p>
+      <p><a href="demarche.html">Ma démarche</a></p>
+      <p><a href="mentions.html">Mentions légales</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Informations légales</h4>
+      <p>Inscrit à l'ORIAS sous le n° 21004487<br>Sous le contrôle de l'ACPR<br>Assurance RC Pro : Zurich Insurance</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 SC Conseils — Sébastien Canquery. Tous droits réservés.</div>
+</footer>
+
+<script>
+document.getElementById('nav-demarche').classList.add('active');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.etape-contenu, .engagement-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'all 0.7s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

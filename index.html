@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SC Conseils — Sébastien Canquery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  padding-top: 80px;
+  background: var(--bleu);
+}
+.section-presentation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 400px;
+}
+.pres-image {
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+}
+.pres-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Hero droite adapté pour photo ronde sur fond noir */
+.hero-droite {
+  position: relative;
+  overflow: hidden;
+  background: var(--bleu);        /* fond bleu au lieu de #0d3d47 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-droite::after { display: none; } /* supprime le dégradé qui ne sert plus */
+
+.hero-droite-photo-wrap {
+  position: relative;
+  width: 85%;
+  max-width: 320px;
+  z-index: 1;
+}
+
+/* Cercle décoratif derrière la photo */
+.hero-droite-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 2px solid rgba(201,168,76,0.30);
+  z-index: 0;
+}
+.hero-droite-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -36px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.12);
+  z-index: 0;
+}
+
+.hero-droite-photo-wrap img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  /* mix-blend-mode pour effacer le fond noir */
+  mix-blend-mode: lighten;
+  position: relative;
+  z-index: 1;
+  filter: saturate(0.95) brightness(1.05);
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="images/logo(sebastien).png" alt="SC Conseils"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-accueil">Accueil</a></li>
+    <li><a href="solutions.html" id="nav-solutions">Mes solutions</a></li>
+    <li><a href="demarche.html" id="nav-demarche">Ma démarche</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-gauche">
+    <p class="hero-surtitre fade-up delay-1">SC Conseils Patrimoine</p>
+    <h1 class="hero-nom fade-up delay-2">Sébastien<br>Canquery</h1>
+    <p class="hero-titre fade-up delay-2">Conseil Patrimonial Indépendant</p>
+    <p class="hero-texte fade-up delay-3">Fort de 4 ans d'expérience dans le conseil financier et patrimonial, j'accompagne mes clients dans la construction, l'optimisation et la protection de leur patrimoine — au service de leurs projets de vie, avec rigueur et transparence.</p>
+    <div class="hero-contacts fade-up delay-4">
+      <div style="margin-top:8px;"><img src="images/numero(sebastien).png" alt="Coordonnées de contact" style="width:320px;display:block;clip-path:inset(0 0 0 4px round 12px);"></div>
+      <div class="hero-contact-item">
+        <span class="icone"><span>⊙</span></span>
+        <span>France</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-droite">
+    <div class="hero-droite-photo-wrap">
+      <img src="images/photo(sebastien).jpg" alt="Sébastien Canquery">
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">4+</div><div class="stat-label">Années d'expérience</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Indépendance</div></div>
+  <div class="stat-item"><div class="stat-num">Vos recommandations</div><div class="stat-label">Mon meilleur vecteur de développement</div></div>
+</div>
+
+<section class="section-presentation">
+  <div class="pres-contenu">
+    <span class="section-tag">Qui suis-je ?</span>
+    <h2 class="section-titre">Une relation de<br>confiance avant<br>tout conseil</h2>
+    <div class="section-trait"></div>
+    <p>Conseiller en gestion de patrimoine indépendant, je place vos objectifs de vie au cœur de chaque stratégie que je construis avec vous. Réduction d'impôts, préparation de la retraite, investissement immobilier, protection familiale : chaque préconisation est taillée à votre mesure, sans compromis.</p>
+    <p>Titulaire de la certification AMF en qualité de Conseiller en Investissements Financiers, membre de l'ANACOFI et inscrit à l'ORIAS sous le n° 21004487, j'interviens dans tous les domaines patrimoniaux avec l'ensemble des habilitations nécessaires.</p>
+    <p>Ma philosophie : une écoute sincère prime toujours sur la recommandation. Ce n'est qu'en comprenant qui vous êtes que je peux vous conseiller ce qui vous correspond vraiment.</p>
+    <br><a href="demarche.html" class="btn">Découvrir ma démarche →</a>
+  </div>
+  <div class="pres-image">
+    <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmcxIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFBNkI3QSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJBOEE5QSIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0M5QTg0QyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhCNjkxNCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2JnMSkiLz4KICA8cmVjdCB4PSIxNDAiIHk9IjQwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDYpIiBzdHJva2Utd2lkdGg9IjEiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDIwMCAxMDApIi8+CiAgPHJlY3QgeD0iMTIwIiB5PSIyMCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA0KSIgc3Ryb2tlLXdpZHRoPSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMDAgMTAwKSIvPgogIDxyZWN0IHg9IjEwMCIgeT0iMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyMDAgMTAwKSIvPgogIDxwYXRoIGQ9Ik00MCwyMzAgTDgwLDIxMCBMMTMwLDE5MCBMMTgwLDE3MCBMMjMwLDE0NSBMMjgwLDExMCBMMzMwLDgwIEwzNzAsNTUgTDM3MCwyNDAgTDQwLDI0MCBaIiBmaWxsPSJyZ2JhKDIwMSwxNjgsNzYsMC4xMikiLz4KICA8cGF0aCBkPSJNNDAsMjMwIEw4MCwyMTAgTDEzMCwxOTAgTDE4MCwxNzAgTDIzMCwxNDUgTDI4MCwxMTAgTDMzMCw4MCBMMzcwLDU1IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZDEpIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iMjMwIiByPSI1IiBmaWxsPSIjQzlBODRDIi8+CiAgPGNpcmNsZSBjeD0iMTMwIiBjeT0iMTkwIiByPSI1IiBmaWxsPSIjQzlBODRDIi8+CiAgPGNpcmNsZSBjeD0iMjMwIiBjeT0iMTQ1IiByPSI1IiBmaWxsPSIjQzlBODRDIi8+CiAgPGNpcmNsZSBjeD0iMzMwIiBjeT0iODAiIHI9IjUiIGZpbGw9IiNDOUE4NEMiLz4KICA8Y2lyY2xlIGN4PSIzNzAiIGN5PSI1NSIgcj0iNyIgZmlsbD0iI0M5QTg0QyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGxpbmUgeDE9IjMwIiB5MT0iMjQwIiB4Mj0iMzgwIiB5Mj0iMjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4zKSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMzAiIHkxPSI0MCIgeDI9IjMwIiB5Mj0iMjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4zKSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8dGV4dCB4PSIyMDAiIHk9IjI3NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjQpIiBmb250LXNpemU9IjExIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjIiPkNST0lTU0FOQ0UgUEFUUklNT05JQUxFPC90ZXh0Pgo8L3N2Zz4=" alt="Croissance patrimoniale">
+    <div class="pres-citation"><p>« Ce n'est pas le patrimoine qui façonne le projet de vie — c'est le projet de vie qui guide la stratégie patrimoniale. »</p></div>
+  </div>
+</section>
+
+<section class="section-savoirfaire">
+  <span class="section-tag">Mon expertise</span>
+  <h2 class="section-titre">Mon savoir-faire</h2>
+  <div class="section-trait centre"></div>
+  <div class="sf-grid">
+    <div class="sf-card">
+      <div class="sf-icone"><span>🏛</span></div>
+      <h3 class="sf-titre">Retraite</h3>
+      <p class="sf-texte">Simulations, stratégies d'épargne et solutions adaptées pour aborder la retraite avec sérénité.</p>
+    </div>
+    <div class="sf-card">
+      <div class="sf-icone"><span>📊</span></div>
+      <h3 class="sf-titre">Fiscalité</h3>
+      <p class="sf-texte">Identification et mise en œuvre des leviers fiscaux adaptés à votre profil pour alléger légalement votre imposition.</p>
+    </div>
+    <div class="sf-card">
+      <div class="sf-icone"><span>🏠</span></div>
+      <h3 class="sf-titre">Immobilier</h3>
+      <p class="sf-texte">De l'investissement locatif aux SCPI, en passant par la nue-propriété : des solutions immobilières ciblées.</p>
+    </div>
+    <div class="sf-card">
+      <div class="sf-icone"><span>🛡</span></div>
+      <h3 class="sf-titre">Prévoyance</h3>
+      <p class="sf-texte">Des couvertures personnalisées pour protéger votre famille et vos proches face aux imprévus de la vie.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-valeurs">
+  <div>
+    <span class="section-tag">Ce qui me guide</span>
+    <h2 class="section-titre">Mes valeurs</h2>
+    <div class="section-trait"></div>
+    <div class="valeurs-liste">
+      <div class="valeur-item">
+        <div class="valeur-num">01</div>
+        <div><div class="valeur-titre">Indépendance</div><p class="valeur-texte">Aucun conflit d'intérêt : je travaille uniquement dans votre intérêt.</p></div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">02</div>
+        <div><div class="valeur-titre">Confidentialité</div><p class="valeur-texte">Vos informations patrimoniales restent strictement confidentielles, à chaque étape.</p></div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">03</div>
+        <div><div class="valeur-titre">Clarté</div><p class="valeur-texte">Des explications accessibles, sans jargon : vous comprenez chaque décision avant de la prendre.</p></div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">04</div>
+        <div><div class="valeur-titre">Engagement</div><p class="valeur-texte">Un suivi dans la durée, parce que votre situation évolue et votre stratégie doit s'y adapter.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="valeurs-visuel">
+    <p class="valeurs-quote">« Un bon conseil ne se construit pas sur des chiffres — il se construit sur la confiance. »</p>
+    <p class="valeurs-quote-auteur">— Sébastien Canquery</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo"><a href="index.html"><img src="images/logo(sebastien).png" alt="SC Conseils"></a></div>
+      <p>Sébastien Canquery<br>Conseil Patrimonial Indépendant</p>
+      <div class="footer-socials">
+        <a href="#" target="_blank" class="footer-social-btn" title="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="#" target="_blank" class="footer-social-btn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <p><a href="index.html">Accueil</a></p>
+      <p><a href="solutions.html">Mes solutions</a></p>
+      <p><a href="demarche.html">Ma démarche</a></p>
+      <p><a href="mentions.html">Mentions légales</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Informations légales</h4>
+      <p>Inscrit à l'ORIAS sous le n° 21004487<br>Sous le contrôle de l'ACPR<br>Assurance RC Pro : Zurich Insurance</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 SC Conseils — Sébastien Canquery. Tous droits réservés.</div>
+</footer>
+
+<script>
+document.getElementById('nav-accueil').classList.add('active');
+</script>
+</body>
+</html>
