@@ -1,0 +1,245 @@
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — tablettes (iPad), téléphones
+   Chargé APRÈS les <style> internes de chaque page pour pouvoir
+   les surcharger.
+   Points de rupture :
+     ≤ 1200px  petits écrans / iPad paysage
+     ≤ 1024px  iPad portrait / tablettes
+     ≤ 768px   grandes tablettes étroites / téléphones paysage
+     ≤ 480px   téléphones
+   ═══════════════════════════════════════════════════════════════ */
+
+html, body { overflow-x: hidden; }
+img { max-width: 100%; }
+
+/* Image "coordonnées" : largeur fixe en inline (320px) → jamais plus large que l'écran */
+.hero-contacts img,
+.cta-contacts img { max-width: 100%; height: auto; }
+
+/* ── Bouton burger (caché sur desktop) ── */
+.nav-toggle {
+  display: none;
+  width: 44px; height: 44px;
+  background: transparent; border: 0; cursor: pointer;
+  position: relative; padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: '';
+  position: absolute; left: 10px; right: 10px;
+  height: 2px; background: var(--blanc);
+  transition: transform 0.3s, background 0.3s, top 0.3s;
+}
+.nav-toggle span { top: 21px; }
+.nav-toggle span::before { left: 0; right: 0; top: -8px; }
+.nav-toggle span::after  { left: 0; right: 0; top: 8px; }
+nav.open .nav-toggle span { background: transparent; }
+nav.open .nav-toggle span::before { top: 0; transform: rotate(45deg); background: var(--or); }
+nav.open .nav-toggle span::after  { top: 0; transform: rotate(-45deg); background: var(--or); }
+
+/* ── Cartes flip : sur écran tactile, seul le clic retourne la carte
+   (sinon le :hover "collant" empêche de la remettre à l'endroit) ── */
+@media (hover: none) {
+  .carte-flip:hover:not(.flipped) .carte-inner { transform: none; }
+  .carte-flip:hover .carte-face::after { transform: scaleX(0); }
+  .sf-card:hover, .etape-contenu:hover { transform: none; }
+}
+
+/* ═══════════ ≤ 1200px ═══════════ */
+@media (max-width: 1200px) {
+  nav { padding: 0 40px; }
+  .nav-links { gap: 28px; }
+
+  .sf-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .section-valeurs,
+  .section-hab { gap: 50px; }
+
+  .page-hero-illus { width: 260px; right: 40px; }
+  .page-hero-inner { max-width: 560px; }
+}
+
+/* ═══════════ ≤ 1024px (iPad portrait) ═══════════ */
+@media (max-width: 1024px) {
+  body { font-size: 18px; }
+
+  /* Espacements généraux */
+  .section-savoirfaire,
+  .solutions-section,
+  .section-demarche,
+  .section-engagement { padding: 80px 40px; }
+  .section-valeurs,
+  .section-hab { padding: 80px 40px; grid-template-columns: 1fr; gap: 50px; }
+  .section-cta { padding: 60px 40px; flex-direction: column; align-items: flex-start; }
+  footer { padding: 50px 40px 30px; }
+
+  /* Hero accueil : texte + photo empilés */
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-gauche { padding: 60px 40px 40px; }
+  .hero-texte { max-width: 600px; }
+  .hero-droite { padding: 20px 40px 70px; }
+  .hero-droite-photo-wrap { width: 60%; max-width: 300px; }
+
+  /* Présentation */
+  .section-presentation { grid-template-columns: 1fr; }
+  .pres-contenu { padding: 80px 40px 60px; }
+  .pres-image { max-height: none; min-height: 320px; }
+  .pres-image img { height: 320px; }
+  .pres-citation { position: relative; bottom: auto; }
+
+  /* Hero des pages internes : illustration sous le texte */
+  .page-hero { padding: 130px 40px 60px; }
+  .page-hero-inner { max-width: 100%; }
+  .page-hero-illus {
+    position: relative; right: auto; top: auto; transform: none;
+    width: 280px; margin-top: 40px; z-index: 1;
+  }
+  .mentions-hero { padding: 130px 40px 60px; }
+
+  /* Cartes solutions : 2 colonnes, hauteur adaptée au contenu */
+  .cartes-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: stretch; }
+  .carte-flip { height: auto; min-height: 300px; }
+  .carte-inner { display: grid; height: 100%; }
+  .carte-face, .carte-dos {
+    position: relative; grid-area: 1 / 1;
+    height: auto; min-height: 300px;
+  }
+
+  /* Timeline démarche : une seule colonne, numéro à gauche */
+  .timeline::before { left: 28px; transform: none; }
+  .etape { grid-template-columns: 56px 1fr; gap: 28px; margin-bottom: 50px; align-items: start; }
+  .etape-vide { display: none; }
+  .etape.gauche .etape-num-wrapper,
+  .etape.droite .etape-num-wrapper { order: 1; padding-top: 30px; }
+  .etape.gauche .etape-contenu,
+  .etape.droite .etape-contenu { order: 2; }
+  .etape.droite .etape-contenu::before { left: 0; right: auto; }
+  .etape-contenu { padding: 36px 32px; }
+
+  /* Engagements */
+  .engagements-grid { grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid .footer-col:first-child { grid-column: 1 / -1; }
+
+  /* Stats : colonnes qui ne débordent pas */
+  .stats-bar { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stat-item { padding: 30px 16px; }
+  .stat-item { display: flex; flex-direction: column; justify-content: center; }
+  .stat-num { font-size: clamp(26px, 3.4vw, 48px); }
+}
+
+/* Icônes réseaux (losanges) : petit décalage pour ne pas être rognées */
+.footer-socials { padding-left: 6px; gap: 16px; }
+
+/* ═══════════ ≤ 860px : menu burger ═══════════ */
+@media (max-width: 860px) {
+  nav { height: 70px; padding: 0 20px; }
+  .nav-logo img { height: 46px; }
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: var(--bleu);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  nav.open .nav-links { max-height: 320px; }
+  .nav-links li { border-top: 1px solid rgba(255,255,255,0.08); }
+  .nav-links a {
+    display: block; padding: 18px 24px;
+    font-size: 14px; border-bottom: 0;
+  }
+  .nav-links a.active { border-bottom: 0; border-left: 3px solid var(--or); }
+
+  .hero { padding-top: 70px; }
+  .page-hero, .mentions-hero { padding-top: 120px; }
+}
+
+/* ═══════════ ≤ 768px ═══════════ */
+@media (max-width: 768px) {
+  body { font-size: 17px; }
+
+  /* Textes : 20px → 17px */
+  .hero-texte, .hero-contact-item, .page-hero-desc,
+  .pres-contenu p, .sf-texte, .valeur-texte, .solutions-intro,
+  .carte-dos-texte, .hab-texte p, .hab-item-titre, .demarche-intro,
+  .etape-texte, .engagement-texte, .cta-texte p, .cta-contact { font-size: 17px; }
+  .pres-citation p { font-size: 18px; }
+  .valeurs-quote { font-size: 22px; }
+  .cta-texte h3 { font-size: 30px; }
+
+  /* Stats en colonne */
+  .stats-bar { grid-template-columns: 1fr; }
+  .stat-item { padding: 26px 24px; border-right: 0; border-bottom: 1px solid rgba(26,107,122,0.2); }
+  .stat-item:last-child { border-bottom: 0; }
+  .stat-num { font-size: 38px; }
+
+  .sf-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; margin-top: 40px; }
+  .sf-card:hover { transform: none; }
+
+  .valeurs-visuel { padding: 44px 32px; }
+
+  /* Cartes : 1 colonne */
+  .cartes-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .carte-face, .carte-dos { padding: 36px 26px; }
+  .solutions-intro { margin-bottom: 44px; }
+
+  .hab-item:hover { transform: none; }
+  .demarche-intro { margin-bottom: 50px; }
+
+  /* Mentions légales */
+  .mentions-body { padding: 60px 24px 80px; }
+  .mentions-ligne { grid-template-columns: 1fr; gap: 2px; margin-bottom: 16px; }
+  .mentions-bloc { margin-bottom: 40px; padding-bottom: 40px; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+
+/* ═══════════ ≤ 480px (téléphones) ═══════════ */
+@media (max-width: 480px) {
+  .hero-gauche { padding: 50px 20px 30px; }
+  .hero-gauche::before { width: 220px; height: 220px; border-width: 36px; right: -90px; }
+  .hero-gauche::after { display: none; }
+  .hero-droite { padding: 20px 20px 60px; }
+  .hero-droite-photo-wrap { width: 72%; }
+
+  .pres-contenu,
+  .section-savoirfaire,
+  .solutions-section,
+  .section-demarche,
+  .section-engagement { padding: 60px 20px; }
+  .section-valeurs,
+  .section-hab { padding: 60px 20px; }
+  .section-cta { padding: 50px 20px; }
+  .page-hero, .mentions-hero { padding: 110px 20px 50px; }
+  .page-hero-illus { width: 220px; }
+  .page-hero::before, .mentions-hero::before { width: 220px; height: 220px; border-width: 40px; }
+  .page-hero::after, .mentions-hero::after { display: none; }
+  footer { padding: 40px 20px 24px; }
+
+  .pres-image, .pres-image img { min-height: 0; height: 240px; }
+  .pres-citation { padding: 22px 22px; }
+
+  .valeur-item { gap: 16px; }
+  .valeur-num { font-size: 40px; }
+
+  .timeline::before { left: 20px; }
+  .etape { grid-template-columns: 40px 1fr; gap: 18px; }
+  .etape-num { width: 40px; height: 40px; font-size: 18px; box-shadow: 0 0 0 5px var(--blanc), 0 0 0 7px var(--or); }
+  .etape-contenu { padding: 28px 22px; }
+  .etape-titre { font-size: 23px; }
+
+  .engagement-item { padding: 34px 22px; }
+  .hab-item { padding: 16px 18px; }
+
+  .btn { padding: 14px 22px; letter-spacing: 1.5px; }
+  .cta-texte h3 { font-size: 27px; }
+
+  .mentions-bloc-num { font-size: 38px; width: 38px; }
+  .mentions-bloc-label { font-size: 22px; }
+}

@@ -75,11 +75,13 @@
 }
 .mentions-update::before { content: '◆'; font-size: 8px; color: var(--or); }
 </style>
+<link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-logo"><a href="index.html"><img src="images/logo(sebastien).png" alt="SC Conseils"></a></div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
   <ul class="nav-links">
     <li><a href="index.html" id="nav-accueil">Accueil</a></li>
     <li><a href="demarche.html" id="nav-demarche">Ma démarche</a></li>
@@ -269,5 +271,6 @@
 <script>
 document.getElementById('nav-accueil') && document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
 </script>
+<script src="menu.js"></script>
 </body>
 </html>
